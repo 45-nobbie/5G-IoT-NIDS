@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# DPDK
+/build
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Logs and outputs
+*.log
+*.pcap

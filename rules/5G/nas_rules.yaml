@@ -1,0 +1,6 @@
+groups:
+  - name: "Excessive 5G Registration Requests"
+    labels:
+      category: "5G_NAS"
+    interval: "alert"
+    limit: "20/sec"
