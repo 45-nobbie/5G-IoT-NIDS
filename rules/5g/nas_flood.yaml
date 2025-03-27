@@ -1,0 +1,3 @@
+- name: "5G NAS Flood"
+  protocol: "5G_NAS"
+  threshold: 2

@@ -1,5 +1,10 @@
 from scapy.all import IP, UDP, send
-from protocols import NAS
+import sys
+
+sys.path.append("../src")
+
+
+from src.protocols import NAS
 import time
 
 devices = [

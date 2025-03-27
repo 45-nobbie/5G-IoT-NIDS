@@ -9,6 +9,11 @@ def main():
     
     # Start capture
     print("🚀 Starting 5G-IoT NIDS (Scapy)...")
+    def debug_process(pkt):
+        print(f"📦 Received packet: {pkt.summary()}")
+        engine.process_packet(pkt)
+
+    capture.start(debug_process)
     capture.start(engine.process_packet)
 
 if __name__ == "__main__":
