@@ -70,7 +70,7 @@ Detection rules are defined in YAML format under the `rules/` directory. For exa
 - [`rules/5g/nas_rules.yaml`](rules/5g/nas_rules.yaml): Defines thresholds for excessive registration requests.
 
 ## Contributing
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions are welcome! Please open an issue or submit a pull request
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
