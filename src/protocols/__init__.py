@@ -1,6 +1,11 @@
-from scapy.all import bind_layers
-from scapy.layers.inet import UDP
-from .fg_nas import NAS
+# src/protocols/__init__.py
+# This file makes the directory a Python package.
+# You can optionally import specific protocol layers here to make them easily accessible.
 
-bind_layers(UDP, NAS, dport=5000)
-__all__ = ["NAS"]
+# Example (once layers are defined):
+# from .nas import NASLayer
+# from .ngap import NGAPLayer
+# from .coap import CoAPLayer
+# from .mqtt import MQTTLayer
+
+print("Initializing custom protocol definitions...")
