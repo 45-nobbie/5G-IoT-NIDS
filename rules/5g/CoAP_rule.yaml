@@ -1,19 +1,26 @@
-# rules/example_rule.yaml
-- rule:
-    id: COAP-Port-Scan-Detect-01 # Rule ID
-    description: "Detects UDP traffic to standard CoAP port (5683)" # Description of the rule
-    protocol: UDP # Protocol context (Matches UDP layer)
-    type: Header # Rule type: Operates on L3/L4 header info
-    conditions:
-      - field: dst_port # Field from extracted packet info (UDP destination port)
-        operator: '==' # Comparison operator (equal to)
-        value: 5683 # Standard CoAP port
-    action: ALERT # Action to take (Generate an alert)
-    severity: LOW # Severity level of the alert
-    log_details: # Fields to include in the alert log
-      - timestamp
-      - src_ip
-      - dst_ip
-      - src_port
-      - dst_port
-      - protocol # Should indicate UDP here
+# rules/5g/CoAP_rule.yaml
+# Corrected Structure: List of rule dictionaries directly
+
+- id: COAP-Port-Scan-Detect-01 # Rule dictionary starts directly with '-'
+  description: "Detects UDP traffic to standard CoAP port (5683)"
+  protocol: UDP
+  type: Header
+  conditions:
+    - field: dst_port
+      operator: '=='
+      value: 5683
+  action: ALERT
+  severity: LOW
+  log_details:
+    - timestamp
+    - src_ip
+    - dst_ip
+    - src_port
+    - dst_port
+    - protocol # Field from IP header (e.g., 17 for UDP)
+    - protocol_l4 # Added in _extract_packet_info (e.g., "UDP")
+
+# You can add more rules here directly using '-'
+# - id: ANOTHER-RULE-ID
+#   description: ...
+#   ...
